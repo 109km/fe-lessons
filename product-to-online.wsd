@@ -1,0 +1,17 @@
+@startuml
+start
+repeat
+  :需求;
+  :设计;
+  fork
+  :前端开发;
+  fork again
+  :后端开发;
+  end fork
+  :前后端联调;
+  :测试;
+  :上线;
+  :数据收集与分析;
+repeat while
+end
+@enduml
