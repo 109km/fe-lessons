@@ -1,17 +1,18 @@
 @startuml
 start
 repeat
-  :需求;
-  :设计;
+  :需求产出;
+  :需求评审（研发，设计，测试）;
   fork
+  :UI设计;
   :前端开发;
   fork again
   :后端开发;
   end fork
   :前后端联调;
-  :测试;
+  :测试（通常2-3轮）;
   :上线;
-  :数据分析;
+  :收集/分析数据;
 repeat while
 end
 @enduml
