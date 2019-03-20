@@ -8,17 +8,15 @@
 
 ## css是什么？
 
-之前我们学习html的时候，学习到html
+之前我们学习html的时候，学习到html是代表内容以及内容的结构。那么**css就是用来给内容增光添彩，增加样式的**。
 
-css全称英文是 Cascading Style Sheets, 翻译成中文就是 `层叠` `样式` `表`。这三个词连起来看的时候非常难以理解到底是什么意思，但是拆开来看的话就会容易很多。
-
-解释之前先看一下这幅图。
+css全称英文是 **`Cascading Style Sheets`**, 翻译成中文就是 `层叠样式表`。这个词看起来比较难以理解什么意思，我们不妨先欣赏一幅画：
 
 ![css-meaning-pic.png](./images/css-meaning-pic.png)
 
 * 层叠: 图里面有层叠的山峦。对于css来说，层叠指的就是不同内容的层次关系，就像这些山一样。
 * 样式：不同的山，有不同的样子，有的山峰是尖的，有的山峰是圆弧的，有的山上有植被。
-* 表：写出来的代码像填出来的表格一样。
+* 表：写出来的代码看起来很像填好的一张表格。
 
 所以里面关键点有两个： `层叠` 和 `样式`。我们都知道一个网页的内容是由html元素组成的，css就是用来装扮这些html元素的，代表网页的**外观**。
 
@@ -33,13 +31,13 @@ css全称英文是 Cascading Style Sheets, 翻译成中文就是 `层叠` `样�
 
 ![css-grammar-explaination.png](./images/css-grammar-explaination.png)
 
-css的语法非常简单，核心部分只有3个：选择器，属性，属性值。固定的部分有：一对花括号，属性和属性值之间的冒号，每一行属性设置完成之后在行末的分号。
+css的语法非常简单，核心部分只有3个：选择器，属性，属性值。其他固定的格式有：一对花括号，属性和属性值之间的冒号，每一行属性设置完成之后在行末的分号。
 
 下面分别解释一下含义：
 
-* 选择器：选中要增加样式的html元素。这里会选中所有符合选择器的元素。在上面的例子会选中所有的`p`标签，无论有多少个都会一起选中。
+* 选择器：选中要增加样式的html元素。这里会选中所有符合选择器的元素。在上面的例子会选中所有的 `p` 标签，无论有多少个都会一起选中。
 * 属性：给选中的元素增加哪些样式。上图里的两个属性就是：字体颜色（color）和字体大小（font-size）
-* 属性值：需要增加的样式设置的具体内容。上图里`color`的值是`red`，代表字体颜色设置为红色；`font-size`的值是`14px`，代表字体大小设置为14个像素。
+* 属性值：需要增加的样式设置的具体内容。上图里 `color` 的值是 `red` ，代表字体颜色设置为红色； `font-size` 的值是 `14px` ，代表字体大小设置为14个像素。
 
 看起来是不是非常简单！
 
@@ -49,7 +47,7 @@ css的语法非常简单，核心部分只有3个：选择器，属性，属性�
 
 #### 方法1：
 
-![css-grammar-explaination.png](./images/css-example-code-02.png)
+![css-grammar-explaination.png](./images/css-example-code-02.svg)
 
 通过上面的代码可以看到，我们在html中插入了一个`style`标签，css的代码是放在`style`标签里的。这样我们就把html与css结合起来了，如果我们把这段代码保存到html文件中，在浏览器中打开以后，就能看到两行文字都变成红色的了。
 
@@ -61,13 +59,26 @@ css的语法非常简单，核心部分只有3个：选择器，属性，属性�
 
 html文件中的`style`标签没了，变成了一个`link`标签，引入我们需要的css文件。
 
-![css-grammar-explaination.png](./images/css-example-code-03.png)
+![css-grammar-explaination.png](./images/css-example-code-03.svg)
 
 这里的css代码被独立放在`01.css`文件中。
-![css-grammar-explaination.png](./images/css-example-code-04.png)
+![css-grammar-explaination.png](./images/css-example-code-04.svg)
 
 以上这种方式的实际效果与第一种方法是一样的，但是多了一些好处：
 
 我们把css代码放在专门的css文件中之后，就意味着这段代码可以被多个html文件引入了，所以聪明的小伙伴就可以把很多通用的样式放在这样一个文件中，然后给多个html文件使用。
 
 而且，通过这种方式，我们还能够使用别人已经写好的样式，同样的我们的样式也可以被别人使用，这就意味着我们可以少做很多重复工作，节约很多时间。
+
+### 多了解一点css选择器
+关于css的选择器，刚才已经了解了一些，现在我们会了解更多一点。
+
+上面有这样一段代码：
+![css-grammar-explaination.png](./images/css-example-code-04.svg)
+
+但是设想一下如果我们有10个 `p` 标签的内容，但是只希望其中某一些段落的字体是红色的，应该怎么办呢？目前上面这段代码会把所有的 `p` 标签字体颜色都设置为红色。
+
+**css选择器有很多种！** 不只html标签的名字可以作为选择器，html标签上的其他属性也是可以作为选择器的。
+
+![css-grammar-explaination.png](./images/css-example-code-05.svg)
+
