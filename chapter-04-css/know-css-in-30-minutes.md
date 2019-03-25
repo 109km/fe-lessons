@@ -141,11 +141,11 @@ div p{
 
 看看下面的计算示例：
 
-![css-grammar-explaination.png](./images/css-example-code-10.png)
+![css-example-code-10.png](./images/css-example-code-10.png)
 
 通过这个例子我们可以回顾一下上一小节的代码示例，我们来计算一下每一条css规则的优先值
 
-![css-grammar-explaination.png](./images/css-example-code-11.png)
+![css-example-code-11.png](./images/css-example-code-11.png)
 
 所以最终我们看到的效果是不同的 `p` 标签展示出了不同的样式。
 
@@ -153,3 +153,52 @@ div p{
 
 * 在多条css规则设置了同样的属性时，优先级高的规则会覆盖优先级低的规则。
 * 如果是不同的属性，则不会被覆盖。
+
+
+## 深入了解css
+
+
+### 盒模型（Box Model） 
+
+既然叫盒模型，说明这里的内容就跟盒子有关系。在html中，所有的元素都是以长方形为容器进行展示的，小到一个字，大到整个网页。比如我们学过的：`p` `div` `span` 等等，全部都是。但是有的同学会有疑问：网页中并没有看到每个元素都看起来是长方形。
+
+**准确的说是每一个元素的所占据的空间都是以长方形划分的！**
+
+举一个现实中的例子，我们每个人家里都有很多盒子，盒子是容器，它的形状是长方形的，但是盒子里面装的东西可以是多种多样的。在网页里，我们经常看不到这些盒子，更多是看到盒子里的东西。
+
+有一个很好的验证方法，就是我们写一段html代码，然后给所有的元素都加上背景颜色，就能看出来了。
+
+试验代码：
+
+![css-example-code-12.png](./images/css-example-code-12.png)
+
+实际效果如下：
+
+![css-example-code-13.png](./images/css-example-code-13.png)
+
+我们会发现第三个盒子比前两个都要短，这是为什么呢？
+
+下面详细地解释一下盒模型的定义：
+
+![box-model.png](./images/box-model.png)
+
+这幅图代表每一个盒子的结构，下面我从内到外解释一下：
+
+* content：内容区域，相当于盒子中间能放东西的地方。
+* padding: 内边距，相当于盒子内放的东西与盒子之间的塑料泡沫。
+* border: 边框，就是盒子的壳。
+* margin: 外边距，盒子与盒子之间的距离。
+* width: 宽度，仅指盒子content区域的宽度。
+* height：高度，仅指盒子content区域的高度。
+
+下面我们做个试验：
+
+![css-example-code-14.png](./images/css-example-code-14.png)
+
+效果如下：
+
+![css-example-code-15.png](./images/css-example-code-15.png)
+
+具体每一个属性到底如何影响了一个盒子的展示，希望大家可以自己动手去跟盒子玩起来，去尝试修改上面的代码，看看有什么样的变化。
+
+### 文档流（盒子如何排列）
