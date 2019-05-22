@@ -66,4 +66,4 @@
 
 ## 练习
 
-1. 阅读这篇资料 [CSS display 属性](http://www.w3school.com.cn/cssref/pr_class_display.asp) ，然后尝试把自己的工作计划修改为只使用 `div` 这个标签，通过`class`来区分不同的功能。（提示：独占一行的元素是block元素，不独占一行的是inline元素。注意查看资料里的**TIY 实例**的部分）
+1. 阅读这篇资料 [CSS display 属性](http://www.w3school.com.cn/cssref/pr_class_display.asp) ，然后尝试把自己的工作计划修改为只使用 `div` 这个标签，通过`class`来区分不同的功能。（提示：独占一行的元素是block元素，不独占一行且不能设置宽高的是inline元素。注意查看资料里的**TIY 实例**的部分）
