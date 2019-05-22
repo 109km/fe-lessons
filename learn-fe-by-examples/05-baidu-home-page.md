@@ -54,4 +54,4 @@
 ## 练习
 
 1. 通过css修改logo的大小
-2. 通过css修改input和button的样式，阅读资料 [css背景](http://www.w3school.com.cn/css/css_background.asp) 和 [css边框](http://www.w3school.com.cn/css/css_border.asp)。（PS：按钮背景色的值为 `#38f`）
+2. 通过css修改input和button的样式，阅读资料 [css背景](http://www.w3school.com.cn/css/css_background.asp) 、[css轮廓](http://www.w3school.com.cn/css/css_outline.asp) 和 [css边框](http://www.w3school.com.cn/css/css_border.asp)。（PS：按钮背景色的值为 `#38f`）
